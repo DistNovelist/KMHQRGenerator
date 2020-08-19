@@ -29,4 +29,5 @@ document.getElementById("Generate").onclick = function(){
     var outputString = sector1 + "," + date_padded + "," + normalTemp + "," + todayTemp + "," + cough + "," + soreThroat + "," + malaise + "," + document.getElementById("etc").value;
     console.log(outputString);
     document.getElementById("result").src = "http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=" + outputString;
+    document.getElementById("resultText").innerText = outputString;
 }
