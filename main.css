@@ -1,0 +1,6 @@
+input{font-size:1em;}
+button{font-size:1em;}
+select{font-size:1em;}
+input[type=checkbox] {
+    transform: scale(2.5);
+}
