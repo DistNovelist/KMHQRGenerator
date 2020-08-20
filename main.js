@@ -30,4 +30,25 @@ document.getElementById("Generate").onclick = function(){
     console.log(outputString);
     document.getElementById("result").src = "http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=" + outputString;
     document.getElementById("resultText").innerText = outputString;
+
+    document.cookie = "grade=" + String(gradeNum) + ";";
+    document.cookie = "class=" + String(classNum) + ";";
+    document.cookie = "studentNum=" + String(studentNum) + ";";
+    document.cookie = "normalTempL=" + document.getElementById("normalTempL").value + ";";
+    document.cookie = "normalTempS=" + document.getElementById("normalTempS").value + ";";
+    document.cookie = "max-age=604800;"
+}
+window.onload = function(){
+    if(document.cookie!=""){
+        var cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
+        var r = document.cookie.split(';');
+        var i = -1;
+        r.forEach(function(value) {
+            i++;
+            //cookie名と値に分ける
+            var content = value.split('=');
+            
+            document.getElementById(cookie_list[i]).value = content[1];
+        })
+    }
 }
