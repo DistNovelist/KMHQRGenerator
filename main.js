@@ -42,9 +42,7 @@ window.onload = function(){
     if(document.cookie!=""){
         const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
-        var i = -1;
         r.forEach(function(value) {
-            i++;
             //cookie名と値に分ける
             var content = value.split('=');
             content[0] = content[0].replace(" ","");
