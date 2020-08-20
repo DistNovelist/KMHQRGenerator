@@ -40,15 +40,18 @@ document.getElementById("Generate").onclick = function(){
 }
 window.onload = function(){
     if(document.cookie!=""){
-        var cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
+        const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
         var i = -1;
         r.forEach(function(value) {
             i++;
             //cookie名と値に分ける
             var content = value.split('=');
-            
-            document.getElementById(cookie_list[i]).value = content[1];
+            content[0] = content[0].replace(" ","");
+            //console.log(content[0]);
+            if(cookie_list.includes(content[0])){
+                document.getElementById(content[0]).value = content[1];
+            }
         })
     }
 }
