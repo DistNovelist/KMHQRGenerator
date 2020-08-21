@@ -39,8 +39,8 @@ document.getElementById("Generate").onclick = function(){
     document.cookie = "max-age=604800;";
 }
 window.onload = function(){
-    document.cookie = "samesite=none;";
-    document.cookie = "secure;"
+    document.cookie = "SameSite=none;";
+    document.cookie = "Secure;"
     if(document.cookie!=""){
         const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
@@ -55,3 +55,12 @@ window.onload = function(){
         })
     }
 }
+
+/*
+制作時間、意外ととってしまった。課題が終わってない……
+まあ、誰かが犠牲にならなきゃこういうものは成り立たない、そう言い聞かせることにしよう。
+コナミコマンド入力したらなんか出るとか考えたけど、俺にそんなJSの技術はなかった……まだまだhtml/jsは理解できん。
+
+このメッセージをみてるキミ、相当マニアだね。先生には言わないでくれよ。
+めちゃくちゃ簡素なページ構成だが、そこには目を瞑ってくれ。
+*/
