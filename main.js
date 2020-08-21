@@ -36,9 +36,11 @@ document.getElementById("Generate").onclick = function(){
     document.cookie = "studentNum=" + String(studentNum) + ";";
     document.cookie = "normalTempL=" + document.getElementById("normalTempL").value + ";";
     document.cookie = "normalTempS=" + document.getElementById("normalTempS").value + ";";
-    document.cookie = "max-age=604800;"
+    document.cookie = "max-age=604800;";
 }
 window.onload = function(){
+    document.cookie = "samesite=none;";
+    document.cookie = "secure;"
     if(document.cookie!=""){
         const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
