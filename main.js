@@ -28,7 +28,7 @@ document.getElementById("Generate").onclick = function(){
     var date_padded =  ("0"+ date.toString()).slice(-4);
     var outputString = sector1 + "," + date_padded + "," + normalTemp + "," + todayTemp + "," + cough + "," + soreThroat + "," + malaise + "," + document.getElementById("etc").value;
     console.log(outputString);
-    document.getElementById("result").src = "http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=" + outputString;
+    document.getElementById("result").src = "https://chart.apis.google.com/chart?cht=qr&chs=150x150&chl=" + outputString;
     document.getElementById("resultText").innerText = outputString;
 
     document.cookie = "grade=" + String(gradeNum) + ";";
