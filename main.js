@@ -39,8 +39,8 @@ document.getElementById("Generate").onclick = function(){
     document.cookie = "max-age=604800;";
 }
 window.onload = function(){
-    document.cookie = "SameSite=none;";
     document.cookie = "Secure;";
+    document.cookie = "SameSite=none;";
     if(document.cookie!=""){
         const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
