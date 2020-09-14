@@ -40,7 +40,7 @@ document.getElementById("Generate").onclick = function(){
 }
 window.onload = function(){
     document.cookie = "SameSite=none;";
-    document.cookie = "Secure;"
+    document.cookie = "Secure;";
     if(document.cookie!=""){
         const cookie_list = ["grade","class","studentNum","normalTempL","normalTempS"];
         var r = document.cookie.split(';');
