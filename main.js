@@ -53,6 +53,9 @@ window.onload = function(){
                 document.getElementById(content[0]).value = content[1];
             }
         })
+        document.getElementById("debug_Cookie").innerText = document.cookie;
+    }else{
+        document.getElementById("debug_Cookie").innerText = "no cookies";
     }
 }
 
