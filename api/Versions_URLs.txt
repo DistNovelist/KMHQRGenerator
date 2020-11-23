@@ -1,2 +1,3 @@
 v1 https://www.icloud.com/shortcuts/3255444fda034ea39650cb3ecd48a5b7
 v2 https://www.icloud.com/shortcuts/01f8eba57ecc4bbb95b6f331ce593cbd
+v3 https://www.icloud.com/shortcuts/fe665be1261c4997920f29dc9ddce6cd
