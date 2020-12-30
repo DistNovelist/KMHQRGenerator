@@ -1,6 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: large;
+}
 input{font-size:1em;}
 button{font-size:1em;}
 select{font-size:1em;}
+sup{color: brown;}
+header {
+  display: flex;
+  width: 100%;
+  background-color: #d9de84;
+  align-items: center;
+  border: 0.2rem solid;
+  border-radius: 0.8rem;
+  border-color: #c3cfa9;
+}
 input[type=checkbox] {
-    transform: scale(2.5);
+    transform: scale(1.5);
+}
+.nav{
+    line-height: 0%;
+}
+.menu-item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 10px;
+    line-height: 100%;
+}
+.title{
+    margin-right: auto;
+    margin-left: 0.5rem;
+}
+.index{
+    font-size: larger;font-weight: bold;
 }
