@@ -38,7 +38,17 @@ document.getElementById("Generate").onclick = function(){
     document.cookie = "normalTempS=" + document.getElementById("normalTempS").value + ";";
     document.cookie = "max-age=604800;";
 }
+
 window.onload = function(){
+    //警告文表示
+    //var now = new Date("Apr 1, 2021 8:00");
+    var now = new Date();
+    var datenum =  (now.getMonth()+1)*100+now.getDate();
+    if(datenum > 400 && datenum < 415){
+        document.getElementById("autoinfo").innerHTML = "新学年になりました。学年・クラス・出席番号が間違っていないか、よくご確認ください。<br>";
+    }
+
+    //cookieの設定
     document.cookie = "Secure;";
     document.cookie = "SameSite=none;";
     if(document.cookie!=""){
@@ -58,12 +68,3 @@ window.onload = function(){
         document.getElementById("debug_Cookie").innerText = "no cookies";
     }
 }
-
-/*
-制作時間、意外ととってしまった。課題が終わってない……
-まあ、誰かが犠牲にならなきゃこういうものは成り立たない、そう言い聞かせることにしよう。
-コナミコマンド入力したらなんか出るとか考えたけど、俺にそんなJSの技術はなかった……まだまだhtml/jsは理解できん。
-
-このメッセージをみてるキミ、相当マニアだね。先生には言わないでくれよ。
-めちゃくちゃ簡素なページ構成だが、そこには目を瞑ってくれ。
-*/
