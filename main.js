@@ -1,3 +1,13 @@
+var storageUsable;
+if(('localStorage' in window) && (window.localStorage !== null)) {
+    storageUsable = true;
+    var storage = localStorage;
+    const loadDataList = ["grade","class","studentNum","normalTempL","normalTempS"];
+} else {
+    storageUsable = false;
+}
+
+
 document.getElementById("Generate").onclick = function(){
     var gradeNum= Number(document.getElementById("grade").value);
     var classNum = Number(document.getElementById("class").value);
@@ -28,15 +38,23 @@ document.getElementById("Generate").onclick = function(){
     var date_padded =  ("0"+ date.toString()).slice(-4);
     var outputString = sector1 + "," + date_padded + "," + normalTemp + "," + todayTemp + "," + cough + "," + soreThroat + "," + malaise + "," + document.getElementById("etc").value;
     console.log(outputString);
-    document.getElementById("result").src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + outputString;
+    document.getElementById("result").src = "https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=" + outputString;
     document.getElementById("resultText").innerText = outputString;
 
-    document.cookie = "grade=" + String(gradeNum) + ";";
+    /*document.cookie = "grade=" + String(gradeNum) + ";";
     document.cookie = "class=" + String(classNum) + ";";
     document.cookie = "studentNum=" + String(studentNum) + ";";
     document.cookie = "normalTempL=" + document.getElementById("normalTempL").value + ";";
     document.cookie = "normalTempS=" + document.getElementById("normalTempS").value + ";";
-    document.cookie = "max-age=604800;";
+    document.cookie = "max-age=604800;";*/
+    //2021-06-19 以降 localStorageを使用
+    if(storageUsable){
+        storage.grade = String(gradeNum);
+        storage.class = String(classNum);
+        storage.studentNum = String(studentNum);
+        storage.normalTempL = document.getElementById("normalTempL").value;
+        storage.normalTempS = document.getElementById("normalTempS").value;
+    }
 }
 
 window.onload = function(){
@@ -48,7 +66,7 @@ window.onload = function(){
         document.getElementById("autoinfo").innerHTML = "新学年になりました。学年・クラス・出席番号が間違っていないか、よくご確認ください。<br>";
     }
 
-    //cookieの設定
+    /*//cookieの設定
     document.cookie = "Secure;";
     document.cookie = "SameSite=none;";
     if(document.cookie!=""){
@@ -66,5 +84,11 @@ window.onload = function(){
         document.getElementById("debug_Cookie").innerText = document.cookie;
     }else{
         document.getElementById("debug_Cookie").innerText = "no cookies";
+    }*/
+    //localStorageの設定
+    if(storageUsable && storage.getItem("grade") !== null){
+        loadDataList.forEach(element => {
+            document.getElementById(element).value = storage.getItem(element);
+        });
     }
 }
