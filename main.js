@@ -1,11 +1,6 @@
-var storageUsable;
-if(('localStorage' in window) && (window.localStorage !== null)) {
-    storageUsable = true;
-    var storage = localStorage;
-    const loadDataList = ["grade","class","studentNum","normalTempL","normalTempS"];
-} else {
-    storageUsable = false;
-}
+var storageUsable = false;
+var storage = localStorage;
+
 
 
 document.getElementById("Generate").onclick = function(){
@@ -86,6 +81,13 @@ window.onload = function(){
         document.getElementById("debug_Cookie").innerText = "no cookies";
     }*/
     //localStorageの設定
+    var loadDataList=[];
+    if(('localStorage' in window) && (window.localStorage !== null)) {
+        storageUsable = true;
+        loadDataList = ["grade","class","studentNum","normalTempL","normalTempS"];
+    } else {
+        storageUsable = false;
+    }
     if(storageUsable && storage.getItem("grade") !== null){
         loadDataList.forEach(element => {
             document.getElementById(element).value = storage.getItem(element);
