@@ -2,27 +2,20 @@
 <html lang="jp">
 <head>
     <meta charset="UTF-8">
+    <title>甲府南 検温QRコード ジェネレータ|このサイトについて</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="main.css" rel="stylesheet" type="text/css">
-    <title>甲府南検温QRコードジェネレータ|このサイトについて</title>
+    <script src="jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-    <span style="font-size: larger;font-weight: bold;" class="title"><a href="main.html" style="text-decoration: none;color: black;">甲府南高校 検温QRコード ジェネレータ</a></span>
-    <nav class="nav">
-        <ul class="menu-group">
-          <li class="menu-item"><a href="main.html">メインページ</a></li>
-          <li class="menu-item"><a href="download.html">ダウンロード</a></li>
-          <li class="menu-item"><a href="about.html">このサービスについて</a></li>
-        </ul>
-      </nav>
-    </header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div id="header"></div>
+    <div id="text">
         <p>
         <div class="index">このサービスについて</div>
         <div>「甲府南高校 検温QRコード ジェネレータ」は生徒個人によって作られた、甲府南高校の検温QRコードの生成を補助するサービスです。</div>
         <div>現在、ウェブページ版とiOSショートカット版、AndroidアプリAPK版の3種類が公開されています。</div>
-        <div>何か問題が発生した場合は、開発者である2年5組23番深澤まで、または<a href="mailto:KMHQR@mbox.re">メール</a>で連絡をお願いします。</div>
+        <div>何か問題が発生した場合は、開発者である3年5組22番深澤まで、または<a href="mailto:KMHQR@mbox.re">メール</a>で連絡をお願いします。</div>
         </p>
         <p>
             <div class="index">主な更新履歴</div>
@@ -31,9 +24,13 @@
                 8月29日　ウェブページ版公開 <br>
                 9月15日　ウェブページ版のCookieをページ内に表示<br>
                 10月25日　iOSショートカット版公開<br>
-                12月30日　ウェブページ版の改装とQRコード表示APIの変更(Google Chart API → QR code API)、AndroidアプリAPK版公開
-                12月31日　AndroidアプリAmazonアプリストア版公開
+                12月30日　ウェブページ版の改装とQRコード表示APIの変更(<a href="https://developers.google.com/chart">Google Chart API</a> → <a href="http://goqr.me/api/">QR code API</a>)、AndroidアプリAPK版公開<br>
+                12月31日　AndroidアプリAmazonアプリストア版公開<br>
+                [2021年]<br>
+                6月19日　データの保存方式をCookieからlocalStorageに変更、QRコードの低画質化、デザインの修正
             </p>
         </p>
+    </div>
+    <script src="commonHTMLload.js" type="text/javascript"></script>
 </body>
 </html>
