@@ -94,5 +94,5 @@ window.onload = function(){
         });
     }
     document.getElementById("todayTempL").value = storage.getItem("normalTempL");
-    document.getElementById("todayTempS").value = storage.getItem("normalTempS");
+    document.getElementById("todayTempS").value = storage.getItem("normalTempS"); 
 }
