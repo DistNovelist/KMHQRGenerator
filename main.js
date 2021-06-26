@@ -93,4 +93,6 @@ window.onload = function(){
             document.getElementById(element).value = storage.getItem(element);
         });
     }
+    document.getElementById("todayTempL").value = storage.getItem("normalTempL");
+    document.getElementById("todayTempS").value = storage.getItem("normalTempS");
 }
