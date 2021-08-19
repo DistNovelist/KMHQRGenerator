@@ -7,8 +7,8 @@ body {
     margin-top: 0em;
     padding: 0;
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #ffffff;
-    color: #333333;
+    background-color: #eee;
+    color: #333;
     font-size: large;
 }
 input{font-size:1em;}
@@ -16,19 +16,28 @@ button{font-size:1em;}
 select{font-size:1em;}
 sup{color: brown;}
 #text{
-    margin-left: 0.3em;
-    margin-right: 0.3em;
-    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 95%;
+    padding: 0.2em 5vw;
+    padding-bottom: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 1em #bbb;
 }
 header {
     width: 100%;
-    padding: 1em 4% 0.3em;
-    background-color: #5b915e;
+    padding: 1em 4% 1em;
+    background: linear-gradient(to bottom right,#6aa43e, #5b915e);
     position: static;
     top: 0;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     color: #fff;
+    box-shadow: 0 -1em 1em 1em #333;
+    text-shadow: 0.02em 0.02em 0.3em #242;
 }
 header h1 {
     margin: 0;
