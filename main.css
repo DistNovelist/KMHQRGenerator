@@ -10,6 +10,7 @@ body {
     background-color: #eee;
     color: #333;
     font-size: large;
+    text-align: center;
 }
 input{font-size:1em;}
 button{font-size:1em;}
@@ -25,6 +26,7 @@ sup{color: brown;}
     padding-bottom: 1em;
     background-color: #fff;
     box-shadow: 0 0 1em #bbb;
+    text-align: left;
 }
 header {
     width: 100%;
